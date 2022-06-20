@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-const PORT = 4000;
+const PORT = 4000 || process.env.PORT;
 app.use(express.json());
 app.get("/", (req, res) => {
   res.send("Connected");
